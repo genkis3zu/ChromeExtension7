@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "拡張機能サンプル6",
+    "version": "0.0.6",
+    "description": "最小構成" ,
+    "browser_action": {
+        "default_popup": "../html/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.data.jma.go.jp/*"
+                ],
+            "js": ["./js/content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["./js/background.js"]
+    },
+    "permissions": [
+        "downloads"
+    ]
+}
